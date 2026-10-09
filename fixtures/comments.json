@@ -1,0 +1,20 @@
+{
+  "page": 1,
+  "hasNext": false,
+  "items": [
+    {
+      "commentId": "c1",
+      "content": "첫 댓글",
+      "writerNickname": "댓글러",
+      "writeDate": "2026.10.09. 14:00",
+      "parentCommentId": null
+    },
+    {
+      "commentId": "c2",
+      "content": "답글",
+      "writerNickname": "대댓글러",
+      "writeDate": "2026.10.09. 14:05",
+      "parentCommentId": "c1"
+    }
+  ]
+}

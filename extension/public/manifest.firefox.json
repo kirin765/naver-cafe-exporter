@@ -1,0 +1,48 @@
+{
+  "manifest_version": 3,
+  "name": "네이버 카페 엑셀 내보내기",
+  "version": "0.1.1",
+  "homepage_url": "https://naver-cafe-exporter.onnurimun.com",
+  "description": "현재 열어 둔 네이버 카페의 게시글·댓글·작성자·회원 데이터를 접근 가능한 범위에서 엑셀(.xlsx)로 내보냅니다. 수집 데이터는 내 컴퓨터에만 저장됩니다.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "카페 엑셀 내보내기",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "background": {
+    "scripts": ["service-worker.js"]
+  },
+  "permissions": ["activeTab", "scripting", "storage", "unlimitedStorage"],
+  "host_permissions": [
+    "*://cafe.naver.com/*",
+    "*://m.cafe.naver.com/*",
+    "*://*.cafe.naver.com/*",
+    "https://naver-cafe-exporter.onnurimun.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://cafe.naver.com/*", "*://m.cafe.naver.com/*"],
+      "js": ["content.js"],
+      "all_frames": true,
+      "match_about_blank": true,
+      "run_at": "document_idle"
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "naver-cafe-exporter@onnurimun.com",
+      "strict_min_version": "115.0"
+    }
+  }
+}

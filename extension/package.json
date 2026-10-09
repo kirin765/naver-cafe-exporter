@@ -1,0 +1,29 @@
+{
+  "name": "naver-cafe-exporter-extension",
+  "private": true,
+  "version": "0.1.1",
+  "type": "module",
+  "description": "네이버 카페 게시글·댓글·작성자·회원 데이터를 엑셀(.xlsx)로 내보내는 크롬 익스텐션",
+  "scripts": {
+    "build": "node scripts/build.mjs chrome",
+    "build:firefox": "node scripts/build.mjs firefox",
+    "build:all": "node scripts/build.mjs all",
+    "package": "node scripts/package.mjs",
+    "package:firefox": "npm run build:firefox && node scripts/package-firefox.mjs",
+    "package:all": "npm run build:all && node scripts/package.mjs && node scripts/package-firefox.mjs",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "e2e:live": "node scripts/e2e-live.mjs",
+    "e2e:extension": "node scripts/e2e-extension.mjs"
+  },
+  "dependencies": {
+    "fflate": "^0.8.2"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.287",
+    "esbuild": "^0.21.5",
+    "jsdom": "^26.1.0",
+    "typescript": "^5.6.3",
+    "vitest": "^3.0.5"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "result": {
+    "cafeId": 10094408,
+    "articleId": 4108669,
+    "menuId": 90,
+    "article": {
+      "id": 4108669,
+      "subject": "중국생산 어떻게 생각하세요?",
+      "menu": { "id": 90, "name": "자유 &#10073; 수다 게시판" },
+      "writer": { "memberKey": "FAKE_member_key_0001", "nick": "작성자닉" },
+      "writeDate": 1791428692110,
+      "readCount": 95,
+      "commentCount": 2,
+      "contentHtml": "<div class=\"se-main-container\"><div class=\"se-text\">본문 내용입니다. <b>굵게</b></div></div>"
+    }
+  }
+}

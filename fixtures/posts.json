@@ -1,0 +1,17 @@
+{
+  "totalCount": 2,
+  "page": 1,
+  "hasNext": true,
+  "articles": [
+    {
+      "articleId": "1001",
+      "subject": "첫 게시글",
+      "writerNickname": "홍길동",
+      "writerId": "ho***",
+      "memberKey": "mk1",
+      "writeDate": "2026.10.09. 13:20",
+      "readCount": "1,234",
+      "commentCount": "5"
+    }
+  ]
+}

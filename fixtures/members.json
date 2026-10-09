@@ -1,0 +1,14 @@
+{
+  "totalCount": 1,
+  "page": 1,
+  "hasNext": false,
+  "members": [
+    {
+      "memberKey": "mk1",
+      "nickname": "회원1",
+      "memberId": "ho***",
+      "grade": "정회원",
+      "joinDate": "2024-01-02"
+    }
+  ]
+}

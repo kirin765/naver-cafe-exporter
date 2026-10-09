@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>네이버 카페 엑셀 내보내기</title>
+    <link rel="stylesheet" href="workspace.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">네이버 카페 엑셀 내보내기</div>
+      <div class="topbar-right">
+        <span id="storage-status" class="muted"></span>
+        <span id="account-status" class="muted"></span>
+        <button id="btn-connect" class="ghost">계정 연결</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="card">
+        <div class="ctx-row">
+          <div>
+            <div id="ctx-label" class="ctx-label">카페 정보를 확인하는 중…</div>
+            <div id="access-banner" class="banner hidden"></div>
+          </div>
+          <button id="btn-recheck-context" class="ghost">접근 권한 다시 확인</button>
+        </div>
+
+        <div class="filters">
+          <label>시작일 <input id="date-from" type="date" /></label>
+          <label>종료일 <input id="date-to" type="date" /></label>
+          <label>최대 게시글 <input id="max-posts" type="number" min="1" max="5000" value="500" /></label>
+          <label class="check"><input id="include-comments" type="checkbox" checked /> 댓글 포함</label>
+          <label class="check"><input id="include-body" type="checkbox" checked /> 본문 포함</label>
+          <label class="check"><input id="include-members" type="checkbox" /> 회원 목록 포함</label>
+        </div>
+
+        <div class="actions">
+          <button id="btn-preview" class="secondary">무료 미리보기 (최대 20개)</button>
+          <button id="btn-full" class="primary">전체 수집 시작</button>
+          <button id="btn-pause" class="ghost hidden">일시정지</button>
+          <button id="btn-cancel" class="ghost hidden">취소</button>
+        </div>
+        <div id="hint" class="hint muted"></div>
+      </section>
+
+      <section id="error" class="card error hidden">
+        <div id="error-text"></div>
+        <button id="error-dismiss" class="ghost">닫기</button>
+      </section>
+
+      <section id="progress" class="card hidden">
+        <div class="progress-head">
+          <span id="phase"></span>
+          <span id="progress-text"></span>
+        </div>
+        <div class="bar"><div id="bar-fill" class="bar-fill"></div></div>
+        <div id="counts" class="muted"></div>
+      </section>
+
+      <section id="result" class="card hidden">
+        <div class="result-head">
+          <div id="result-summary"></div>
+          <div class="result-actions">
+            <button id="btn-download" class="primary">엑셀 내려받기</button>
+            <button id="btn-resume" class="secondary hidden">이어서 수집</button>
+            <button id="btn-delete" class="ghost">작업 삭제</button>
+          </div>
+        </div>
+        <div id="coverage" class="coverage"></div>
+        <div class="table-wrap">
+          <table id="preview-table">
+            <thead></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <p id="preview-note" class="muted small"></p>
+      </section>
+
+      <section class="card">
+        <div class="section-title">최근 작업</div>
+        <ul id="jobs-list" class="jobs"></ul>
+        <p id="jobs-empty" class="muted small">아직 수집한 작업이 없습니다.</p>
+      </section>
+    </main>
+
+    <script src="workspace.js"></script>
+  </body>
+</html>

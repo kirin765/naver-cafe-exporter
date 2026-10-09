@@ -1,0 +1,16 @@
+{
+  "summary": {
+    "en-US": "Export accessible Naver Cafe posts, comments and authors (members when permitted) to Excel (.xlsx). Collected data stays on your computer.",
+    "ko": "접근 가능한 네이버 카페 게시글·댓글·작성자(권한 시 회원)를 엑셀(.xlsx)로 저장합니다. 수집 데이터는 내 컴퓨터에만 남습니다."
+  },
+  "categories": {
+    "firefox": ["other"]
+  },
+  "version": {
+    "license": "all-rights-reserved",
+    "release_notes": {
+      "en-US": "First public release.",
+      "ko": "첫 공개 버전입니다."
+    }
+  }
+}

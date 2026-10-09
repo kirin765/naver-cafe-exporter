@@ -1,0 +1,39 @@
+{
+  "result": {
+    "cafeId": 10094408,
+    "articleId": 4108669,
+    "displayCommentCount": 2,
+    "hasNext": false,
+    "comments": {
+      "items": [
+        {
+          "id": 100096860,
+          "refId": 100096860,
+          "isRef": false,
+          "writer": { "memberKey": "FAKE_member_key_0002", "nick": "댓글러" },
+          "content": "첫 댓글",
+          "updateDate": 1791442682000,
+          "isDeleted": false
+        },
+        {
+          "id": 100096861,
+          "refId": 100096860,
+          "isRef": true,
+          "writer": { "memberKey": "FAKE_member_key_0003", "nick": "대댓글러" },
+          "content": "답글입니다",
+          "updateDate": 1791442699000,
+          "isDeleted": false
+        },
+        {
+          "id": 100096862,
+          "refId": 100096862,
+          "isRef": false,
+          "writer": { "nick": "삭제됨" },
+          "content": "",
+          "updateDate": 1791442700000,
+          "isDeleted": true
+        }
+      ]
+    }
+  }
+}
