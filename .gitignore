@@ -1,0 +1,29 @@
+# secrets / sessions
+.env
+*.env
+cookies*.json
+storage_state*.json
+*_token*.json
+
+# data & exports
+data/
+exports/
+*.xlsx
+*.csv
+!docs/**/*.csv
+
+# python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+
+# node
+node_modules/
+dist/
+
+# os
+.DS_Store
